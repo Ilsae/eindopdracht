@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	max-width: 80%;
+	padding-left: 10%;
+	font-size: 1em; 
+	font-family: "Myriad Pro", Helvetica, sans-serif, arial, tahoma;
+	color: #777;
+	line-height: 1.5em;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+h1 {
+	margin-top: 1em;
+}
+
+h2 {
+	margin-top: 1em;
+}
+
+a {
+	color: #777;
+	list-style: none;
+	text-decoration: none;
+}
+
+p a {
+	color:  rgba(252, 102, 33, 1);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+section > h1, section > h2 {
+	font-size: 1em;
+}
+
+section > p {
+	margin-bottom: 1em;
+}
+
+footer h1 {
+	font-size: 15px;
+}
+
+footer {
+	padding-top: 5em;
+	font-size: 13px;
+	line-height: 1.5em;
+}
+
+
+footer li {
+			display: inline-block;
+
+}
+
+
+.boxshadow h1 {											/* modernizr */
+	box-shadow: .1px .1px .1px #888888;
+}
+
+.textshadow h1 {										/* modernizr */
+	text-shadow: 1px 1px 1px rgba(94, 94, 94, 1);
+}
+
+.no-boxshadow h1 {										/* modernizr */
+	border: 5px solid red;
+}
+
+
+/* ---------------------------------- <<<< 30 em ---------------------------------------------- */
+@media (max-width:29em) {  
+	header nav:nth-of-type(1) {
+		display: inline-block;
+		text-align: center;	
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	header nav:nth-of-type(1) li {
+		margin-top: .5em;
+		background-color: rgba(252, 102, 33, 1);
+		border-radius:500px 50px;
+	}
+
+
+
+	header nav:nth-of-type(2) {
+		display: none;
+	}
+}
+
+
+/* ---------------------------------- 30 --- 55 em---------------------------------------------- */
+@media screen and (min-width: 29em) and (max-width: 55em) {
+	img {
+		display: block;
+	}
+
+	header nav:nth-of-type(1) {
+		display: inline-block;
+		font-weight: bold;
+
+	}
+
+	header nav:nth-of-type(2) {
+		display: inline-block;
+		margin-left: 10%;
+	}
+
+	nav ul li {
+		min-width: 10em;
+	}
+}
+
+
+
+
+/* ------------------------------ 55 em >>>> -------------------------------------------------- */
+@media (min-width:55em) { 
+	article section {
+		max-width: 60%;
+	}
+
+	aside {
+		float: right;
+		max-width: 30%;
+		padding-left: 30px;
+	}
+	
+	aside section, aside > h1 {
+		padding-left: 30px;
+		border-left: 1px grey solid;
+	}
+
+
+
+	nav ul li {
+		display: inline-block;
+		padding-left: 1em;
+		padding-right: 1em;
+		min-width: 0;
+		font-size: .9em;
+	}
+
+
+	header nav:nth-of-type(1) {
+		background-color: rgba(252, 102, 33, 1);
+		margin: 0 auto;
+		font-weight: bold;
+		display: block;
+	}
+
+	header nav:nth-of-type(2) {
+		background-color: rgba(252, 102, 33, .1);
+		display: block;
+		margin: 0 auto;
+	}
+
+}

@@ -1,0 +1,265 @@
+* {
+	font-size: 100%
+}
+
+body {
+	font-size: 1em; 
+	font-family: "Myriad Pro", Helvetica, sans-serif, arial, tahoma;
+	color: #777;
+	line-height: 1.5em;
+}
+
+main {
+	width: 90%;
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	padding-right: 10%;
+}
+
+fieldset {
+	border:1px solid #999;
+    border-radius:.5em;
+    box-shadow:0 0 10px #999;
+    margin-bottom: 30px;
+    background: rgba(200,20,15,.1);
+    -webkit-animation:colors 4s; /* Chrome, Safari, Opera */
+	animation:colors 4s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-direction: alternate;
+	-webkit-animation-direction: alternate;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes colors {
+	0% {background:rgba(55,79,250,.1);}
+	50% {background:rgba(200,20,15,.5);} 
+	100% {background:rgba(250, 237,55,.5);}
+}
+
+/* Standard syntax */
+@keyframes colors {
+	0% {background:rgba(55,79,250,.1);}
+	50% {background:rgba(200,20,15,.5);} 
+	100% {background:rgba(250, 237,55,.5);}
+}
+
+fieldset legend:nth-of-type(1) { 	/*alleen de eerste legends van een fieldset */
+	background:#fff;
+	text-shadow:0 0 .1em blue, 0 0 .2em blue;
+	border: 1px solid #AAAAAA;
+	border-radius:500px 50px;
+    box-shadow: 0 0 19px #FF0404;
+    padding: 10px;
+    font-size: em;
+	color: yellow; 
+}
+
+fieldset legend:nth-of-type(1):hover {
+	text-shadow:0 0 .1em red, 0 0 .2em red;
+}
+
+label, input, textarea {
+	display: block;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	display: inline-block;
+}
+
+
+/* It will select only the element that is immediately preceded by the former element.
+ In this case, only the first label after each input[type].*/
+input[type="radio"] + label, input[type="checkbox"] + label {
+	display: inline-block;
+	margin-right: 30px;
+	margin-bottom: 10px;
+}
+
+label {
+	text-shadow: 3px 2px 2px rgba(0,0,0,0.2);
+}
+
+input:nth-of-type(even) { 
+	background-color: rgba(255,112,126,0.6);
+}
+
+textarea:nth-last-child(1) {	/* all "heeft u nog opmerkingen" textareas */
+	background-color: rgba(0,255,0,0.6);
+}
+
+textarea {
+	width: 50%;
+}
+
+input, textarea {
+	background-color: rgba(202,232,252,0.9);
+}
+
+/* Browser prefixes are used to add new features that may not be part of a formal 
+	specification and to implement features in a specification that hasn’t been finalized.*/
+input, textarea {
+	margin-bottom: 10px;
+	-webkit-transition:1s; /* Safari & iOS*/
+	   -moz-transition:1s; /* Firefox */
+	   -ms-transition: 1s; /* IE */
+	     -o-transition:1s; /* Opera */
+	        transition:1s;
+}
+
+/* The :focus pseudo-class applies while an element has the focus (accepts keyboard or mouse events, or other forms of input). */
+input:focus, textarea:focus { 
+	background-color: red;
+}
+
+input:hover, textarea:hover {
+	background-color: blue;
+}
+
+/* It will select any fieldset elements, as long as they follow an input["aanmelden"]. */
+input[name="aanmelden"] ~ fieldset { 
+	display: none;					/* ~ zet alles wat na de fieldset komt op display none */
+}
+
+/* wanneer er een is gecheckt, dan showt ie de volgende elementen én de volgende ook. maar één bestaat steeds niet. */
+input[name="aanmelden"]:checked + label + input + label + fieldset, /* + select only the element that is immediately preceded by the former element. */
+input[name="aanmelden"]:checked + label + fieldset + fieldset {
+	display: block;
+}
+
+input[type="submit"] {
+	background-color: rgba(250,62,97,0.6);
+	text-shadow:0 0 .1em blue, 0 0 .2em blue;
+	font-size: 1.7emx;
+	padding: 30px;
+	border: none;
+	border-radius: 65px 65px 200px 200px;
+	-moz-border-radius: 65px 65px 200px 200px;
+	-webkit-border-radius: 65px 65px 200px 200px;
+	-webkit-box-shadow: 18px 17px 40px 5px rgba(0,0,0,0.78);
+	-moz-box-shadow: 18px 17px 40px 5px rgba(0,0,0,0.78);
+	box-shadow: 18px 17px 40px 5px rgba(0,0,0,0.78);
+}
+
+input[type="submit"]:hover {
+	position: relative;
+	-webkit-animation: round 5s; /* Chrome, Safari, Opera */
+	animation: round 5s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes round {
+	0%   {left:0px; top:0px;}
+	25%  {left:1000px; top:0px;}
+	50%  {left:1000px; top:-500px;}
+	75%  {left:0px; top:-500px;}
+	100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes round {
+	0%   {left:0px; top:0px;}
+	25%  {left:1000px; top:0px;}
+	50%  {left:1000px; top:-500px;}
+	75%  {left:0px; top:-500px;}
+	100% {left:0px; top:0px;}
+}
+
+footer h1 {
+	font-size: 15px;
+}
+
+footer {
+	padding-top: 5em;
+	font-size: 13px;
+	line-height: 1.5em;
+}
+
+
+footer li {
+			display: inline-block;
+
+}
+
+/* ---------------------------------- <<<< 30 em ---------------------------------------------- */
+@media (max-width:29em) {  
+	 nav:nth-of-type(1) {
+		display: inline-block;
+		text-align: center;	
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	 nav:nth-of-type(1) li {
+		margin-top: .5em;
+		background-color: rgba(252, 102, 33, 1);
+		border-radius:500px 50px;
+		display: block;
+	}
+
+
+
+	nav:nth-of-type(2) {
+		display: none;
+	}
+
+
+
+
+}
+
+
+/* ---------------------------------- 30 --- 55 em---------------------------------------------- */
+@media screen and (min-width: 29em) and (max-width: 55em) {
+	img {
+		display: block;
+	}
+
+
+
+	nav ul li {
+		min-width: 10em;
+	}
+}
+
+
+
+
+/* ------------------------------ 55 em >>>> -------------------------------------------------- */
+@media (min-width:55em) { 
+	nav ul li {
+		display: inline-block;
+		padding-left: 1em;
+		padding-right: 1em;
+		min-width: 0;
+		font-size: .9em;
+	}
+
+
+	nav:nth-of-type(1) {
+		background-color: rgba(252, 102, 33, 1);
+		margin: 0 auto;
+		font-weight: bold;
+		display: block;
+	}
+
+	nav:nth-of-type(2) {
+		background-color: rgba(252, 102, 33, .1);
+		display: block;
+		margin: 0 auto;
+	}
+
+}
